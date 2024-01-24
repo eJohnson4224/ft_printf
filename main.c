@@ -4,13 +4,24 @@
 
 int     main(int argc,char *argv[])
 {
-    int i;
+    unsigned int i;
+    unsigned int *ptr_i;
+    int ft_count;
     int count;
 
-    i = 2333;
-    count = printf("teste %% %d %s %p \n", 34, argv[1], i);
-    ft_printf("teste %% %d %s %p \n", 34, argv[1], i);
+    i = 34857634;
+    ptr_i = &i;
+    /*count = printf("teste %% %d %s %p \n", 34, argv[1], ptr_i);
+    ft_count = ft_printf("teste %% %d %s %p \n", 34, argv[1], ptr_i);
+    count += printf("tesst %X %d %u\n", i, i, i);
+    ft_count += ft_printf("tesst %X %d %u\n", i, i, i);
+    */
+
+    count = printf("teste %s\n", argv[1]);
+    ft_count = ft_printf("teste %s\n", argv[1]);
+
     printf("count = %%%d\n", count);
+    ft_printf("ft_count = %%%d\n", ft_count);
 
 /*
     count = 0;
