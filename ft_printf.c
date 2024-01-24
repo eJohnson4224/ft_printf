@@ -17,7 +17,7 @@ int	ft_printf(const char *input, ...)
 	}
 	va_end(argp);
 
-	return (count);
+	return (count - 2);
 }
 
 int	print_var(char type, va_list ap)
@@ -34,7 +34,7 @@ int	print_var(char type, va_list ap)
 	else if (type == 'x' || type == 'X')
 		count = hex_print(va_arg(ap, unsigned int), type, 0);
 	else if (type == 'p')
-		count = ptr_print((unsigned long)va_arg(ap, void *), type, 0);
+		count = ptr_print((unsigned long)va_arg(ap, void *), type);
 	else if (type == '%')
 		count = write (1, &"%", 1);
 	else
