@@ -17,7 +17,7 @@ int	ft_printf(const char *input, ...)
 	}
 	va_end(argp);
 
-	return (count - 2);
+	return (count);
 }
 
 int	print_var(char type, va_list ap)
@@ -29,8 +29,10 @@ int	print_var(char type, va_list ap)
 		count = char_print(va_arg(ap, int));
 	else if (type == 's')
 		count = str_print(va_arg(ap, char *), count);
-	else if (type == 'd' || type == 'i' || type == 'u')
-		count = num_print(va_arg(ap, long), type, 0);
+	else if (type == 'd' || type == 'i')
+		count = num_print(va_arg(ap, int), type, 0);
+	else if (type == 'u')
+		count = unsigned_print(va_arg(ap, unsigned int), count, 0);
 	else if (type == 'x' || type == 'X')
 		count = hex_print(va_arg(ap, unsigned int), type, 0);
 	else if (type == 'p')

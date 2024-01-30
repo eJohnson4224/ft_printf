@@ -13,4 +13,5 @@ int	    hex_print(unsigned long num, char type, int count);
 int 	ptr_print(unsigned long num, char type);
 int		str_print(char *s, int count);
 int	    char_print(int c);
+int	unsigned_print(unsigned int num, char type, int count);
 #endif
