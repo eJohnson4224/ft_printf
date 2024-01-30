@@ -1,4 +1,4 @@
-NAME=ft_printf.a
+NAME=libftprintf.a
 SOURCES=char_print.c str_print.c num_print.c \
 hex_print.c ptr_print.c ft_printf.c  
 OBJECTS=$(SOURCES:.c=.o)
