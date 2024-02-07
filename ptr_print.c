@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-int	ptr_print(unsigned long num, char type)
+int	ptr_print(unsigned long int num, char type)
 {
 	int	count;
 

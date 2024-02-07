@@ -30,12 +30,7 @@ int	unsigned_print(unsigned int num, char type, int count)
 
 	num_base = 10;
 	symbols = "0123456789";
-	if (num < 0)
-	{
-		count += write(1, &"-", 1);
-		return (num_print(-num, type, count));
-	}
-	else if (num < num_base)
+	if (num < num_base)
 		return (char_print(symbols[num]));
 	else
 	{

@@ -36,7 +36,7 @@ int	print_var(char type, va_list ap)
 	else if (type == 'x' || type == 'X')
 		count = hex_print(va_arg(ap, unsigned int), type, 0);
 	else if (type == 'p')
-		count = ptr_print((unsigned long)va_arg(ap, void *), type);
+		count = ptr_print(va_arg(ap, unsigned long int), type);
 	else if (type == '%')
 		count = write (1, &"%", 1);
 	else

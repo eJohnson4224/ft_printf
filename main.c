@@ -17,9 +17,9 @@ int     main(int argc,char *argv[])
     ft_count += ft_printf("tesst %X %d %u\n", i, i, i);
     */
 
-    count = printf("test %i%c%c%c", -1, 'a', '\t', 'c');
+    count = printf("test %s %c%c%c", "15", '0', '0', '1');
     printf("\n");
-    ft_count = ft_printf("test %i%c%c%c", -1, 'a', '\t', 'c');
+    ft_count = ft_printf("test %s %c%c%c", "15", '0', '0', '1');
     printf("\n");
 
     printf("count = %%%d\n", count);
