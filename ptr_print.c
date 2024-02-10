@@ -9,5 +9,5 @@ int	ptr_print(unsigned long int num, char type)
 		return (str_print("(nil)", count));
 	if (count < 2)
 		count += str_print("0x", count);
-	return (hex_print(num, type, count));
+	return (count + hex_print(num, type));
 }
