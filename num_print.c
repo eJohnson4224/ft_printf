@@ -1,10 +1,20 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   num_print.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ejohnson <ejohnson@student.42berlin.d      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/15 22:05:42 by ejohnson          #+#    #+#             */
+/*   Updated: 2024/02/15 22:11:14 by ejohnson         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "ft_printf.h"
 
 int	num_print(long int num, char type, int count)
 {
+	int		num_base;
 	char	*symbols;
-	int			num_base;
 
 	symbols = "0123456789";
 	num_base = 10;
@@ -24,8 +34,8 @@ int	num_print(long int num, char type, int count)
 
 int	unsigned_print(unsigned int num, char type, int count)
 {
-	unsigned int		num_base;
-	char	*symbols;
+	char			*symbols;
+	unsigned int	num_base;
 
 	num_base = 10;
 	symbols = "0123456789";
