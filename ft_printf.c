@@ -1,14 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ejohnson <ejohnson@student.42berlin.d      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/15 21:58:27 by ejohnson          #+#    #+#             */
-/*   Updated: 2024/02/15 22:00:55 by ejohnson         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 #include "ft_printf.h"
 
 int	ft_printf(const char *input, ...)
@@ -27,6 +16,7 @@ int	ft_printf(const char *input, ...)
 		++input;
 	}
 	va_end(argp);
+
 	return (count);
 }
 
@@ -40,9 +30,9 @@ int	print_var(char type, va_list ap)
 	else if (type == 's')
 		count = str_print(va_arg(ap, char *), count);
 	else if (type == 'd' || type == 'i')
-		count = num_print(va_arg(ap, int), type, 0);
+		count = num_print(va_arg(ap, int), type);
 	else if (type == 'u')
-		count = unsigned_print(va_arg(ap, unsigned int), count, 0);
+		count = unsigned_print(va_arg(ap, unsigned int), type);
 	else if (type == 'x' || type == 'X')
 		count = hex_print(va_arg(ap, unsigned int), type);
 	else if (type == 'p')
@@ -51,5 +41,6 @@ int	print_var(char type, va_list ap)
 		count = write (1, &"%", 1);
 	else
 		count = str_print("(null)", count);
+
 	return (count);
 }
