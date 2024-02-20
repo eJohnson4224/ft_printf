@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ejohnson <ejohnson@student.42berlin.d      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/20 14:54:01 by ejohnson          #+#    #+#             */
+/*   Updated: 2024/02/20 14:54:04 by ejohnson         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "ft_printf.h"
 
 int	ft_printf(const char *input, ...)
@@ -16,7 +27,6 @@ int	ft_printf(const char *input, ...)
 		++input;
 	}
 	va_end(argp);
-
 	return (count);
 }
 
@@ -41,6 +51,5 @@ int	print_var(char type, va_list ap)
 		count = write (1, &"%", 1);
 	else
 		count = str_print("(null)", count);
-
 	return (count);
 }

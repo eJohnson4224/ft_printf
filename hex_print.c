@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   hex_print.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ejohnson <ejohnson@student.42berlin.d      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/20 14:57:48 by ejohnson          #+#    #+#             */
+/*   Updated: 2024/02/20 14:57:52 by ejohnson         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "ft_printf.h"
 
 int	hex_print(unsigned long int num, char type)
 {
 	int		count;
-	int 	hex_base;
+	int		hex_base;
 	char	*symbols;
 
 	count = 0;
